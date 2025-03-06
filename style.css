@@ -1,0 +1,372 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body {
+    background: linear-gradient(135deg, #f5b7b1, #533b3b, #432650);
+    background-attachment: fixed;
+    font-family: Arial, sans-serif;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    flex-wrap: wrap;
+    gap: 20px; 
+    text-align: center;
+}
+.row > div {
+    flex: 1;
+    padding: 20px;
+    max-width: 500px;
+}
+.row h3{
+    font-size: 30px;
+    color: #070404;
+    margin-left: -50px; 
+}
+.row p{
+    font-size: 20px;
+    margin-top: 40px;
+}
+.icon {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    gap: 15px;
+    margin-top: 20px;
+    padding-right: 100px;
+}
+.icon-1 {
+    display: flex;
+    gap: 10px;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    align-items: center;
+    position:fixed ;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px;
+    background-color: #f8f9fa;
+}
+
+.icon-1 i {
+    font-size: 25px; 
+    color: #000000;
+}
+
+.icon-1 p {
+    margin: 0; 
+    font-size: 13px;
+}
+
+
+.icon a {
+    text-decoration: none; 
+    font-size: 30px; 
+    color: black; 
+    transition: transform 0.3s ease-in-out;
+}
+
+.icon a:hover {
+    transform: scale(1.2); 
+    color: #e7e7e7; 
+}
+
+.row img {
+    max-width: 50%;
+    height: auto;
+    border-radius: 50px;
+    display: block;
+    margin-left: auto; 
+}
+.img-container {
+    width: 400px; 
+    background: linear-gradient(135deg, #a09d9b, #976962);
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    padding: 20px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.img-container:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+.img-container img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto;
+    transition: transform 0.3s ease-in-out;
+}
+.img-container:hover img {
+    transform: scale(1.1);
+}
+
+.profile-info {
+    margin-top: 10px;
+    text-align: center;
+    font-size: 5px;
+}
+.profile-info h4 {
+    margin-bottom: 1px; /* Mengurangi jarak antara h4 dan p */
+}
+
+.profile-info p {
+    margin-top: 1px; /* Mengurangi jarak dari atas */
+    margin-bottom: 0; /* Menghapus jarak ke bawah */
+}
+
+.marquee-container {
+    position: absolute;
+    bottom: 50px; 
+    left: 0;
+    width: 100%;
+    background-color: white;
+    padding:10px 0;
+    text-align: center;
+    overflow: hidden;
+    white-space: nowrap;
+    z-index: 1; 
+}
+
+.marquee-text {
+    display: inline-block;
+    font-size: 20px;
+    font-weight: bold;
+    color: #000;
+    white-space: nowrap;
+    animation: marquee 12s linear infinite;
+}
+
+@keyframes marquee {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+/* Mengatur ukuran carousel */
+#carouselExampleDark {
+    max-width: 1000px; /* Batasi lebar maksimal */
+    margin: auto; /* Pusatkan carousel */
+    padding-top: 20px;
+}
+
+.carousel-inner img {
+    height: 400px; /* Tetapkan tinggi gambar */
+    object-fit: cover; /* Pastikan gambar tetap proporsional */
+    border-radius: 10px; /* Beri sedikit efek rounded */
+}
+
+/* Mengatur tombol navigasi */
+.carousel-control-prev, .carousel-control-next {
+    width: 5%;
+}
+#pelayan h2 {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    z-index: 10;
+    padding: 10px;
+}
+#jadwal-container {
+    display: flex;
+    justify-content: space-between; /* Pisahkan jadwal dan jam ke kiri & kanan */
+    align-items: flex-start;
+    padding: 20px;
+}
+
+#jadwal-section {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px;
+}
+
+#jadwal {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    max-width: 500px;
+}
+/* Pastikan .image-container tidak tetap di posisi tertentu */
+.image-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Tengah */
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    padding: 10px;
+    position: relative; /* Hapus fixed */
+    max-width: 500px;
+    margin: 10px auto;
+    background: none;
+    box-shadow: none;
+}
+
+/* Pastikan gambar tidak terlalu besar */
+.image-container img {
+    width: 30%;
+    max-width: 120px;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+/* Mode Mobile: Gambar di bawah teks */
+@media screen and (max-width: 600px) {
+    #jadwal {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .image-container {
+        flex-wrap: wrap;
+        justify-content: center;
+        order: 2; /* Pastikan muncul setelah teks */
+        max-width: 100%;
+        position: relative; /* Tidak fixed */
+    }
+
+    .image-container img {
+        width: 80px; /* Lebih kecil di layar kecil */
+        max-width: 80px;
+    }
+}
+
+
+/* Kotak jam hanya ada di dalam jadwal */
+#real-time-clock-container {
+    background: rgba(189, 179, 179, 0.2);
+    padding: 15px 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(231, 231, 231, 0.2);
+    text-align: center;
+    min-width: 150px;
+    margin-top: 15px;
+}
+
+#real-time-clock-container h3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+#real-time-clock {
+    font-size: 20px;
+    font-weight: bold;
+    color: #bb3030;
+}
+.content{
+    display: block;
+}
+#home {
+    display: block;
+}
+.clock-container {
+    position: absolute;
+    right: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    background: #f8f9fa;
+    padding: 7px 25px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(10, 10, 10, 0.2);
+}
+.image-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-items: center;
+    position: fixed;
+    bottom: 20px;
+    right: 50px;
+    max-width: 35vw;
+    gap: 8px;
+    background: none;
+    box-shadow: none;
+    transform: translateX(-30px);
+}
+
+.image-container img {
+    width: 140px;
+    height: 110px;
+    border-radius: 5px;
+    object-fit: cover;
+    opacity: 0;
+    transform: scale(0.8);
+    animation: fadeIn 1s ease-out forwards;
+    transition: transform 0.4s ease, box-shadow 0.4s ease, filter 0.4s ease;
+}
+
+.image-container img:hover {
+    transform: scale(1.2) rotate(5deg);
+    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.5);
+    filter: brightness(1.2) contrast(1.1);
+    animation: shake 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes shake {
+    0% { transform: scale(1.2) rotate(4deg); }
+    50% { transform: scale(1.2) rotate(-4deg); }
+    100% { transform: scale(1.2) rotate(4deg); }
+}
+.card {
+    flex: 1; /* Membuat semua kartu memiliki ukuran yang sama */
+    min-width: 260px; /* Menyesuaikan ukuran minimum */
+    max-width: 300px; /* Menentukan ukuran maksimum */
+}
+.card-body{
+    text-align: center;
+}
+.card img {
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    border-radius: 10px;
+  }
+  
+  .card img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    border-radius: 15px;
+  }
+  
+.card img{
+        height: 200px;
+        object-fit: cover;
+}
+  
+
+
+
+
+
+
